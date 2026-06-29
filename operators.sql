@@ -1,0 +1,23 @@
+use emp_details;
+select * from emp;
+select * from emp where comm is null;
+select * from emp where mgr is null;
+select * from emp where JOB="salesman" and deptno in (30);
+select * from emp where JOB="salesman" and deptno in (30) and sal>1500;
+select * from emp where ename like "s%" or ename like "a%";
+select * from emp where deptno !=30;
+select * from emp where ename like "s%";
+select * from emp where mgr is not null and deptno=10;
+select * from emp where comm is null and job="clerk";
+select * from emp where mgr is not null and deptno in (10 ,	30);
+select * from emp where job="salesman" and  deptno = 30 and sal>2450;
+select * from emp where  job="analyst" and deptno = 20 and sal>2550;
+select * from emp where ename like "m%" or ename like "j%";
+select * , sal*12 "annual_sal" from emp where deptno!=30;
+select * from emp where (ename not like "%es") or (ename not like "%r");
+select * from emp where (mgr is not null )and (deptno = 10) and (sal*12+10/100);
+select * from emp where job="salesman" and ename like "%e_" and  sal like"____%";
+select * from emp where hiredate > 1982-01-01;
+select * from emp where month (hiredate) =2;
+select * from emp where (job!="manager") and (job!="clerk") and (deptno!=30) and (sal between 1000 and 3000);
+
